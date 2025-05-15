@@ -9,7 +9,7 @@ const BookCard = ({ data, favourite }) => {
     bookid:data._id,
   }
   const handleRemoveBook =async () => {
-    const response =await axios.put("http://localhost:1000/api/v1/deletebookfromfavourite",
+    const response =await axios.put("https://inky-reads.onrender.com/api/v1/deletebookfromfavourite",
       {},
       {headers}
     ) 
