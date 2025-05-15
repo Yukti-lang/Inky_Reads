@@ -12,7 +12,7 @@ const UserOrderHistory = () => {
   }
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("http://localhost:1000/api/v1/orderhistory ",{ headers })
+      const res = await axios.get("https://inky-reads.onrender.com/api/v1/orderhistory ",{ headers })
       console.log(res.data)
       setOrderHistory(res.data.data)
     }
