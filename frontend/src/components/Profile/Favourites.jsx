@@ -10,7 +10,7 @@ const [FavouriteBooks, setFavouriteBooks] = useState()
   }
   useEffect(()=>{
     const fetch = async () => {
-      const response = await axios.get("http://localhost:1000/api/v1/getfavouritebooks", 
+      const response = await axios.get("https://inky-reads.onrender.com/api/v1/getfavouritebooks", 
         {headers}
       );
       setFavouriteBooks(response.data.data);
