@@ -8,7 +8,7 @@ const RecentlyAdded = () => {
     useEffect(() => {
         const fetch = async() => {
            const response =  await axios.get(
-            "http://localhost:1000/api/v1/getrecentbooks"
+            "https://inky-reads.onrender.com/api/v1/getrecentbooks"
         )
         setData(response.data.data)
         }
