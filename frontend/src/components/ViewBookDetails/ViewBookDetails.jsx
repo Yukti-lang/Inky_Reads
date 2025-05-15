@@ -19,7 +19,7 @@ const ViewBookDetails = () => {
       useEffect(() => {
           const fetch = async() => {
              const response =  await axios.get(
-              `https://inky-reads.onrender.com/api/v1/getbookbyid/${id}`
+              `http://localhost:1000/api/v1/getbookbyid/${id}`
           )
           setData(response.data.data)
           }
@@ -32,18 +32,18 @@ const ViewBookDetails = () => {
   }
      const handleFavourite = async()=>{
       const response = await axios.put(
-        "https://inky-reads.onrender.com/api/v1/addbooktofavourite",
+        "http://localhost:1000/api/v1/addbooktofavourite",
         {},{headers});
         alert(response.data.message);
      }
      const handleCart = async()=>{
       const response = await axios.put(
-        "https://inky-reads.onrender.com/api/v1/addbooktocart",
+        "http://localhost:1000/api/v1/addbooktocart",
         {},{headers});
       alert(response.data.message);
      }
      const deleteBook = async () => {
-        const response = await axios.delete("https://inky-reads.onrender.com/api/v1/deletebook", {headers});
+        const response = await axios.delete("http://localhost:1000/api/v1/deletebook", {headers});
        alert(response.data.message)
        navigate("/all-books")
      }
