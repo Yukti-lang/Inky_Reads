@@ -47,7 +47,7 @@ const Navbar = () => {
         <Link to="/" className="flex items-center" >
             <img 
         className="h-10 me-4"
-        src="https://cdn-icons-png.flaticon.com/128/10433/10433049.png" alt="logo"/>
+        src="https://cdn-icons-png.flaticon.com/128/2702/2702184.png" alt="logo"/>
             <h1 className="text-2xl font-semibold">InkyReads</h1></Link>
         <div className="nav-links-InkyReads block md:flex items-center gap-4 ">
          <div className="hidden md:flex gap-4">
