@@ -43,7 +43,7 @@ const Navbar = () => {
     const [MobileNav, setMobileNav] = useState("hidden");
   return (
     <>
-    <nav className="z-50 relative flex bg-sky-600 text-white px-8 py-4 items-center justify-between">
+    <nav className="z-50 relative flex bg-sky-400 text-white px-8 py-4 items-center justify-between">
         <Link to="/" className="flex items-center" >
             <img 
         className="h-10 me-4"
@@ -74,7 +74,7 @@ const Navbar = () => {
          <div className="hidden md:flex gap-4">
         <Link to="/LogIn" className="px-4 py-1  bg-white font-semibold text-black 
         rounded hover:bg-black hover:text-white transition-all duration-300">LogIn</Link>
-        <Link to="/SignUp" className="px-4 py-1 bg-blue-500 bg-white  font-semibold  
+        <Link to="/SignUp" className="px-4 py-1 bg-white  font-semibold  
          rounded hover:bg-black hover:text-white transition-all duration-300 text-black ">SignUp</Link>
       </div>
      )}
@@ -103,7 +103,7 @@ const Navbar = () => {
        {isLoggedIn === false ? (<> <Link to="/LogIn" className={`${MobileNav} px-8 mb-8 text-3xl font-semibold py-2 border border-sky-500 
        rounded text-sky-500 hover:bg-sky-500 hover:text-white transition-all duration-300`}>LogIn</Link>
         <Link to="/SignUp" className={`${MobileNav} px-8 mb-8 text-3xl font-semibold py-2 bg-sky-500 
-        rounded hover:bg-white hover:text-amber-800 transition-all duration-300 text-white `}>SignUp</Link>
+        rounded hover:bg-white hover:text-sky-500 transition-all duration-300 text-white `}>SignUp</Link>
        </>
        ):(<></>)}
             </div>

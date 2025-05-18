@@ -17,7 +17,7 @@ const RecentlyAdded = () => {
 
   return (
     <div className="mt-8 px-4">
-        <h4 className="text-3xl text-sky-500">Recently added books</h4>
+        <h4 className="text-3xl text-black ">Recently added books</h4>
         {!Data && (
             <div className="flex items-center justify-center my-8">
             <Loader />{" "}

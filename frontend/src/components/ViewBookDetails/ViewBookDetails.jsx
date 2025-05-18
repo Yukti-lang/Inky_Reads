@@ -49,10 +49,10 @@ const ViewBookDetails = () => {
      }
   return (
    <>
-   {Data &&  <div className="px-4  md:px-12 py-8 bg-sky-700 flex flex-col lg:flex-row gap-8">
+   {Data &&  <div className="px-4  md:px-12 py-8 bg-white flex flex-col lg:flex-row gap-8">
       <div className=" w-full lg:w-3/6 ">
       {" "}
-      <div className="flex flex-col lg:flex-row justify-around bg-sky-500  p-12 rounded">
+      <div className="flex flex-col lg:flex-row justify-around bg-pink-300  p-12 rounded">
         <img src={Data.url} alt="/" 
         className="h-[50vh] md:h-[60vh] lg:h-[70vh] rounded" />
       {isLoggedIn === true && role ==="user" && (
@@ -79,9 +79,9 @@ const ViewBookDetails = () => {
       </div>
       <div className="p-4 w-full lg:w-3/6">
       <h1 className="text-4xl text-black font-semibold">{Data.title}</h1>
-      <p className="text-white mt-1 font-semibold">by {Data.author}</p>
+      <p className="text-zinc-700 mt-1 font-semibold">by {Data.author}</p>
       <p className="text-black mt-4 text-xl">{Data.desc}</p>
-      <p className="flex mt-4 items-center justify-start text-white font-semibold">
+      <p className="flex mt-4 items-center justify-start text-zinc-700 font-semibold">
         <GrLanguage className="me-3" />{Data.language}
       </p>
       <p className="mt-4 text-black text-3xl font-semibold">

@@ -4,7 +4,7 @@ import RecentlyAdded from '../components/Home/RecentlyAdded'
 
 const Home = () => {
   return (
-    <div className="bg-white text-sky-600 px-10 py-8">
+    <div className="bg-white text-pink-300 px-10 py-8">
       <Hero />
       <RecentlyAdded />
     </div>

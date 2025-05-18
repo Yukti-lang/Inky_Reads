@@ -26,7 +26,7 @@ const Profile = () => {
   
 
   return (
-    <div className="bg-sky-700 px-4 md:px-12 flex flex-col md:flex-row py-8 gap-4 text-white">
+    <div className="bg-white px-4 md:px-12 flex flex-col md:flex-row py-8 gap-4 text-black">
       {!Profile && <div className="w-full h-screen flex items-center justify-center">
         <Loader/>
         </div>

@@ -30,7 +30,7 @@ const UserOrderHistory = () => {
     {OrderHistory && OrderHistory.length === 0 && (
       <div className="h-[80vh] p-4 text-white">
         <div className="h-[100%] flex flex-col items-center justify-center">
-          <h1 className="text-5xl font-semibold text-white mb-8">
+          <h1 className="text-5xl font-semibold text-black mb-8">
               No order history
           </h1>
             <img
@@ -42,11 +42,11 @@ const UserOrderHistory = () => {
       </div>
     )}
     {OrderHistory && OrderHistory.length > 0 && (
-      <div className="h-[100%] p-0 md:p-4 text-white">
-        <h1 className="text-3xl md:text-5xl font-semibold text-white mb-8">
+      <div className="h-[100%] p-0 md:p-4 text-black">
+        <h1 className="text-3xl md:text-5xl font-semibold text-black mb-8">
             Your order history
         </h1>
-        <div className="mt-4 bg-sky-400 w-full rounded py-2 px-4 flex gap-2 font-semibold">
+        <div className="mt-4 bg-pink-400 w-full rounded py-2 px-4 flex gap-2 font-semibold">
           <div className="w-[3%]">
             <h1 className="text-center">Sr.
             </h1>
@@ -68,7 +68,7 @@ const UserOrderHistory = () => {
           </div>
         </div>
         {OrderHistory.map((items, i) => items.book ? (
-          <div key = {items._id || i} className="bg-sky-500 w-full rounded py-2 px-4 flex gap-4 hover:bg-sky-600  "> 
+          <div key = {items._id || i} className="bg-pink-300 w-full rounded py-2 px-4 flex gap-4 hover:bg-sky-400  "> 
             <div className="w-[3%]">
               <h1 className="text-center"> {i + 1} </h1>
               </div>
@@ -86,11 +86,11 @@ const UserOrderHistory = () => {
                   <h1 className="">₹ {items.book.price}</h1>
                   </div>
                 <div className="w-[16%]">
-                  <h1 className="font-semibold text-green-500">
+                  <h1 className="font-semibold text-green-700">
                      {items.status === "Order Placed" ? (
-                      <div className="text-yellow-500">{items.status} </div>
+                      <div className="text-purple-900">{items.status} </div>
                       ) : items.status === "Cancelled" ? (
-                        <div className="text-red-500">{items.status}
+                        <div className="text-red-600">{items.status}
                         </div> 
                       ) : (items.status )
                       
@@ -98,7 +98,7 @@ const UserOrderHistory = () => {
                      </h1>
                   </div>
                      <div className="w-none md:w-[5%] hidden md:block">
-                      <h1 className="text-sm text-white">{items.paymentMode}</h1>
+                      <h1 className="text-sm text-black">{items.paymentMode}</h1>
             </div>
             </div>
 

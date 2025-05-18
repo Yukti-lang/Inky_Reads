@@ -72,7 +72,7 @@ const Cart = () => {
 };
 
   return (
-   <div className="bg-sky-700 px-12 h-screen py-8">
+   <div className="bg-white px-12 h-screen py-8">
     {!Cart && <div className="w-full h-[100%] flex items-center justify-center my-8"><Loader/></div>}
     {Cart && Cart.length === 0 && (
         <div className="h-screen">
@@ -90,11 +90,11 @@ const Cart = () => {
     )}
     {Cart && Cart.length > 0 && (
       <>
-      <h1 className="text-5xl font-semibold text-white mb-8">
+      <h1 className="text-5xl font-semibold text-black mb-8">
         Your Cart
       </h1>
       {Cart.map((items , i) => 
-      <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-sky-400 justify-between items-center"
+      <div className="w-full my-4 rounded flex flex-col md:flex-row p-4 bg-pink-300 justify-between items-center"
       keuy ={i}
       >
         <img src={items.url}
@@ -102,24 +102,24 @@ const Cart = () => {
         className="h-[20vh] md:h-[10vh] object-cover"
         />
         <div className="w-full md:w-auto">
-          <h1 className="text-2xl text-white font-semibold text-start mt-2 md:mt-0">
+          <h1 className="text-2xl text-black font-semibold text-start mt-2 md:mt-0">
               {items.title}
           </h1>
-          <p className="text-normal text-white mt-2 hidden lg:block">
+          <p className="text-normal text-black mt-2 hidden lg:block">
               {items.desc.slice(0, 100)}...
           </p>
-          <p className="text-normal text-white mt-2 hidden md:block lg:hidden">
+          <p className="text-normal text-black mt-2 hidden md:block lg:hidden">
               {items.desc.slice(0, 65)}...
           </p>
-          <p className="text-normal text-white mt-2 block md:hidden">
+          <p className="text-normal text-black mt-2 block md:hidden">
               {items.desc.slice(0, 100)}...
           </p>
         </div>
         <div className="flex mt-4 w-full md:w-auto itemss-center justify-between">
-          <h2 className="text-white text-3xl font-semibold flex ">
+          <h2 className="text-black text-3xl font-semibold flex ">
               ₹ {items.price}
           </h2>
-          <button className="bg-red-100 text-red-700 border border-700 rounded p-2 ms-12"
+          <button className="bg-sky-400 text-red-700 border border-700 rounded p-2 ms-12"
           onClick={() =>deleteItem(items._id) }
           >
             <AiFillDelete />
@@ -131,11 +131,11 @@ const Cart = () => {
     )}
     {Cart && Cart.length > 0 && (
       <div className="mt-4 w-full flex items-center justify-end">
-        <div className="p-4 bg-sky-400 rounded">
-          <h1 className="text-3xl text-white font-semibold">
+        <div className="p-4 bg-pink-300 rounded">
+          <h1 className="text-3xl text-black font-semibold">
               Total Amount
           </h1> 
-          <div className="mt-3 flex items-center justify-between text-xl text-white">
+          <div className="mt-3 flex items-center justify-between text-xl text-black">
             <h2>{Cart.length} books 
             </h2>
             <h2>₹ {Total}</h2>
@@ -143,7 +143,7 @@ const Cart = () => {
             <div className="w-[100%] mt-3"> 
               
              <div className="mb-4">
-    <label className="text-white text-lg mr-4">Select Payment Mode:</label>
+    <label className="text-black text-lg mr-4">Select Payment Mode:</label>
     <select
       value={paymentMode}
       onChange={(e) => setPaymentMode(e.target.value)}
@@ -155,7 +155,7 @@ const Cart = () => {
   </div>
   
   <button
-    className="bg-white rounded px-4 py-2 flex justify-center w-full font-semibold hover:bg-sky-200 transition-all duration-300"
+    className="bg-white rounded px-4 py-2 flex justify-center w-full font-semibold hover:bg-sky-400 transition-all duration-300"
     onClick={PlaceOrder}
   >
     {paymentMode === "COD" ? "Place your COD Order" : "Pay & Place Order"}

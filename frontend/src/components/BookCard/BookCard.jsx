@@ -16,7 +16,7 @@ const BookCard = ({ data, favourite }) => {
     alert(response.data.message)
   }
   return (
-    <div className="bg-sky-300 rounded p-4 flex flex-col ">
+    <div className="bg-pink-300 rounded p-4 flex flex-col ">
       <Link to={`/view-book-details/${data._id}`}>
       <div className="">
         <div className="bg-white rounded flex items-center justify-center p-2  ">
@@ -28,7 +28,7 @@ const BookCard = ({ data, favourite }) => {
         </div>
       </Link>
       {favourite && (
-        <button className="bg-yellow-50 px-4 py-2 rounded border border-yellow-500 text-yellow-500 mt-4"
+        <button className="bg-white px-4 py-2 rounded border border-fuchsia-900 text-fuchsia-900 mt-4"
         onClick={handleRemoveBook}
         >
           Remove your favourite

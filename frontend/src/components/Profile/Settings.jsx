@@ -35,27 +35,27 @@ const Settings = () => {
       {!ProfiileData && <div className="w-full h-[100%] flex items-center justify-center"><Loader/></div>}
       {ProfiileData && (
         <div className="h-[60vh] p-0 md:p-4 text-black">
-          <h1 className="text-3xl md:test-5xl font-semibold  text-white mb-8 ">
+          <h1 className="text-3xl md:test-5xl font-semibold  text-black mb-8 ">
             Settings
           </h1>
           <div className="flex gap-12">
           <div className="">
-            <label htmlFor="" className="text-white font-semibold">Username</label>
-            <p className="p-2 rounded bg-sky-200 mt-2 font-semibold">
+            <label htmlFor="" className="text-black font-semibold">Username</label>
+            <p className="p-2 rounded bg-pink-300 mt-2 font-semibold">
               {ProfiileData.username}
             </p>
             </div>
              <div className="">
-            <label htmlFor="" className="text-white font-semibold">Email</label>
-            <p className="p-2 rounded bg-sky-200 mt-2 font-semibold">
+            <label htmlFor="" className="text-black font-semibold">Email</label>
+            <p className="p-2 rounded bg-pink-300 mt-2 font-semibold">
               {ProfiileData.email}
             </p>
             </div>
           </div>
           <div className="mt-4 flex flex-col">
-          <label htmlFor="" className="text-white font-semibold">Address</label>
+          <label htmlFor="" className="text-black font-semibold">Address</label>
           <textarea
-            className="p-2 rounded bg-sky-200 mt-2 font-semibold"
+            className="p-2 rounded bg-pink-300 mt-2 font-semibold"
             rows="5"
             placeholder="Address"
             name="address" 
@@ -64,7 +64,7 @@ const Settings = () => {
             />
           </div>
           <div className="mt-4 flex justify-end" >
-            <button className="bg-yellow-500 text-white font-semibold px-3 py-2 rounded  hover:bg-yellow-500 transition-all duration-300"
+            <button className="bg-sky-400 text-black font-semibold px-3 py-2 rounded  hover:bg-pink-300 transition-all duration-300"
             onClick={submitAddress}>
                 Update
             </button>

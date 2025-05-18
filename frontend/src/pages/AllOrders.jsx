@@ -9,7 +9,7 @@ import SeeUserData from './SeeUserData';
 const AllOrders = () => {
   const[AllOrders, setAllOrders] = useState()
   const[Options, setOptions] = useState(-1)
-  const[Values, setValues] = useState({ status : ""})
+  const[Values, setValues] = useState({ status : " "})
   const [userDiv , setuserDiv] = useState("hidden") 
   const [userDivData , setuserDivData] = useState() 
    const headers = {
@@ -22,7 +22,7 @@ const AllOrders = () => {
       const response = await axios.get("http://localhost:1000/api/v1/getallorders" , {headers})
       setAllOrders(response.data.data)
     }
-    fetch()
+    fetch();
   }, [AllOrders]);
 
   const change = (e) => {
@@ -44,11 +44,11 @@ const AllOrders = () => {
     )}
     
     {AllOrders && AllOrders.length > 0 && (
-      <div className="h-[100%] p-0 md:p-4 text-white">
-        <h1 className="text-3xl md:text-5xl font-semibold text-white mb-8">
+      <div className="h-[100%] p-0 md:p-4 text-black">
+        <h1 className="text-3xl md:text-5xl font-semibold text-black mb-8">
             All Orders
         </h1>
-        <div className="mt-4 bg-sky-400 w-full rounded py-2 px-4 flex gap-2 font-semibold">
+        <div className="mt-4 bg-pink-400 w-full rounded py-2 px-4 flex gap-2 font-semibold">
           <div className="w-[3%]">
             <h1 className="text-center">Sr.
             </h1>
@@ -71,8 +71,8 @@ const AllOrders = () => {
            </h1>
           </div>
         </div>
-        {AllOrders && AllOrders.map((items, i) => (
-          <div className="bg-sky-500 w-full rounded py-2 px-4 flex gap-4 hover:bg-sky-600 hover:cursor-pointer transition-all duration-300">
+        {AllOrders && AllOrders.map((items, i) => ( items.book?(
+          <div className="bg-pink-300 w-full rounded py-2 px-4 flex gap-4 hover:bg-sky-400 hover:cursor-pointer transition-all duration-300">
             <div className="w-[3%]">
                 <h1 className="text-center">{i+1}
                 </h1>
@@ -104,7 +104,7 @@ const AllOrders = () => {
                     }
                     </button>
                     <div className={`${Options === i ? "block" : "hidden"} flex mt-4`}>
-                      <select name="status" id="" className="bg-sky-700" onChange={change } value={Values.status}>
+                      <select name="status" id="" className="bg-sky-400" onChange={change } value={Values.status}>
                         {[
                           "Order placed",
                           "Out for delivery",
@@ -128,7 +128,7 @@ const AllOrders = () => {
                     </h1>
                     </div>
                     <div className="w-[10%] md:w-[5%]">
-                        <button className="text-xl hover:text-orange-500"
+                        <button className="text-xl hover:text-red-500"
                         onClick={() => {
                           setuserDiv("fixed")
                           setuserDivData(items.user)
@@ -137,7 +137,7 @@ const AllOrders = () => {
                           <IoOpenOutline />
                         </button>
                       </div>
-          </div>
+          </div>) : null
         ))}
         </div> 
     )}

@@ -66,16 +66,16 @@ useEffect(() => {
           fetch()
       }, []);
   return (
-     <div className="h-[100%] p-0 md:p-4 bg-sky-700">
-        <h1 className="text-3xl md:text-5xl font-semibold text-white mb-8">Update Book</h1>
-        <div className="p-4 bg-sky-600 rounded">
+     <div className="h-[100%] p-0 md:p-4 bg-white">
+        <h1 className="text-3xl md:text-5xl font-semibold text-black mb-8">Update Book</h1>
+        <div className="p-4 bg-pink-300 rounded">
             <div>
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Image
                 </label>
                 <input 
                     type="text"
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     placeholder="url of image"
                     name="url"
                     required
@@ -84,12 +84,12 @@ useEffect(() => {
                     />
             </div>
             <div className="mt-4">
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Title of book
                 </label>
                 <input 
                     type="text"
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     placeholder="title of book"
                     name="title"
                     required
@@ -98,12 +98,12 @@ useEffect(() => {
                     />
             </div>
             <div className="mt-4">
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Author of book
                 </label>
                 <input 
                     type="text"
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     placeholder="author of book"
                     name="author"
                     required
@@ -113,12 +113,12 @@ useEffect(() => {
             </div>
             <div className="mt-4 flex gap-4">
                 <div className="w-3/6">
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Language
                 </label>
                 <input 
                     type="text"
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     placeholder="language of book"
                     name="language"
                     required
@@ -127,12 +127,12 @@ useEffect(() => {
                     />
             </div>
             <div className="w-3/6">
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Price
                 </label>
                 <input 
                     type="number"
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     placeholder="price of book"
                     name="price"
                     required
@@ -142,11 +142,11 @@ useEffect(() => {
             </div>
         </div>
         <div className="mt-4">
-                <label htmlFor="" className="text-white">
+                <label htmlFor="" className="text-black">
                     Description of Book
                 </label>
                 <textarea 
-                    className="w-full mt-2 bg-white text-black p-2 outline-none"
+                    className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
                     rowws="5"
                     placeholder="description of book"
                     name="desc"
@@ -156,7 +156,7 @@ useEffect(() => {
                     />
             </div>
             <button 
-                className=" mt-4 px-3 bg-blue-500 text-white font-semibold py-2 rounded hover:bg-white hover:text-sky-500 transition-all duration-300"
+                className=" mt-4 px-3 bg-white text-black font-semibold py-2 rounded hover:bg-black hover:text-white transition-all duration-300"
                 onClick={submit}
                 >
                     Update Book

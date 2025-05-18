@@ -8,31 +8,31 @@ const Sidebar = ({data}) =>  {
     const history = useNavigate();
     const role = useSelector((state) => state.auth.role);
   return (
-    <div className="bg-sky-500 p-4 rounded flex flex-col items-center justify-between h-auto lg:h-[100%]">
+    <div className="bg-pink-300 p-4 rounded flex flex-col items-center justify-between h-auto lg:h-[100%]">
         <div className="flex items-center flex-col justify-center">
             <img src={"http://localhost:1000/images/user.png"} className="h-[12vh]" />
-        <p className=" mt-3 text-xl text-white font-semibold">
+        <p className=" mt-3 text-xl text-black font-semibold">
             {data.username}
         </p>
-        <p className="mt-1 text-normal text-white ">{data.email}</p>
-        <div className="w-full mt-4 h-[1px] bg-white hidden lg:block"></div>
+        <p className="mt-1 text-normal text-black ">{data.email}</p>
+        <div className="w-full mt-4 h-[1px] bg-black hidden lg:block"></div>
         </div>
 
         {role === "user" && (
         <div className="w-full flex-col items-center justify-center hidden lg:flex">
             <Link 
             to="/profile"
-            className="text-white font-semibold w-full py-2 text-center rounded hover:bg-sky-700 transition-all duration-300">
+            className="text-black font-semibold w-full py-2 text-center rounded hover:bg-sky-400 transition-all duration-300">
                 Favourites
             </Link> 
             <Link 
             to="/profile/orderHistory"
-            className="text-white font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-700 transition-all duration-300">
+            className="text-black font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-400 transition-all duration-300">
                 Order History
             </Link> 
             <Link 
             to="/profile/settings"
-            className="text-white font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-700 transition-all duration-300">
+            className="text-black font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-400 transition-all duration-300">
                 Settings
             </Link> 
         </div>
@@ -41,12 +41,12 @@ const Sidebar = ({data}) =>  {
         <div className="w-full flex-col items-center justify-center hidden lg:flex">
             <Link 
             to="/profile"
-            className="text-white font-semibold w-full py-2 text-center rounded hover:bg-sky-700 transition-all duration-300">
+            className="text-black font-semibold w-full py-2 text-center rounded hover:bg-sky-400 transition-all duration-300">
                 All Orders 
             </Link> 
             <Link 
             to="/profile/add-book"
-            className="text-white font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-700 transition-all duration-300">
+            className="text-black font-semibold w-full py-2 mt-4 text-center rounded hover:bg-sky-400 transition-all duration-300">
                 Add Book
             </Link> 
         </div>
