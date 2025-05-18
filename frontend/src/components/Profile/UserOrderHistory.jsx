@@ -18,7 +18,12 @@ const UserOrderHistory = () => {
     }
     fetch();
   }, [])
-  
+  // GET /api/v1/getorders
+// app.get("/getorders", async (req, res) => {
+//   const orders = await Order.find({ userId: req.user.id });
+//   res.json({ data: orders });
+// });
+
   return (
     <>
     {!OrderHistory && (<div className="flex items-center justify-center h-[100%]"><Loader/></div>)}
@@ -93,7 +98,7 @@ const UserOrderHistory = () => {
                      </h1>
                   </div>
                      <div className="w-none md:w-[5%] hidden md:block">
-                      <h1 className="text-sm text-white">COD</h1>
+                      <h1 className="text-sm text-white">{items.paymentMode}</h1>
             </div>
             </div>
 

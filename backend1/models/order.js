@@ -14,8 +14,14 @@ const order = new mongoose.Schema({
     status: {
         type: String,
         default: 'Order Placed',
-        enum:["Order Placed", "Out for delivery , Delivered , Cancelled"]
+        enum:["Order Placed", "Out for delivery" ," Delivered" ," Cancelled"]
     },
+    paymentMode: {
+  type: String,
+  enum: ['COD', 'Online'],
+  required: true,
+  default: "COD"
+},
 },
 {timestamps: true}
 ); //kis user ne order kiya h 

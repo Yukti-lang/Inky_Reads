@@ -10,6 +10,8 @@ const Cart = () => {
   const navigate = useNavigate()
   const [Cart , setCart ] =  useState()
   const [Total, setTotal] = useState(0)
+  const [paymentMode, setPaymentMode] = useState("COD"); // default
+
    const headers ={
     id: localStorage.getItem("id"),
     authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -43,18 +45,32 @@ const Cart = () => {
     }
   }, [Cart])
   const PlaceOrder = async () => {
-    try {
+  try {
+    if (paymentMode === "COD") {
       const res = await axios.post(
         `http://localhost:1000/api/v1/placeorder`,
-        { order:Cart},
-        {headers}
-      )
-      alert(res.data.message)
-      navigate("/profile/orderHistory")
-    } catch (error) {
-      console.log(error)
+        { order: Cart, mode: "COD" },
+        { headers }
+      );
+      alert(res.data.message);
+      navigate("/profile/orderHistory");
+    } else {
+      // Dummy Payment logic (simulate success)
+      alert("Payment Successful! Placing order...");
+      const res = await axios.post(
+        `http://localhost:1000/api/v1/placeorder`,
+        { order: Cart, mode: "Online" },
+        { headers }
+      );
+      alert(res.data.message);
+      navigate("/profile/orderHistory");
     }
+  } catch (error) {
+    console.log(error);
+    alert("Something went wrong!");
   }
+};
+
   return (
    <div className="bg-sky-700 px-12 h-screen py-8">
     {!Cart && <div className="w-full h-[100%] flex items-center justify-center my-8"><Loader/></div>}
@@ -125,11 +141,25 @@ const Cart = () => {
             <h2>₹ {Total}</h2>
             </div>
             <div className="w-[100%] mt-3"> 
-              <button className="bg-white rounded px-4 py-2 flex justify-center w-full font-semibold hover:bg-sky-200 transition-all duration-300"
-              onClick={PlaceOrder}
-              >
-                Place your order
-              </button>
+              
+             <div className="mb-4">
+    <label className="text-white text-lg mr-4">Select Payment Mode:</label>
+    <select
+      value={paymentMode}
+      onChange={(e) => setPaymentMode(e.target.value)}
+      className="rounded px-2 py-1"
+    >
+      <option value="COD">Cash on Delivery</option>
+      <option value="Online">Online Payment</option>
+    </select>
+  </div>
+  
+  <button
+    className="bg-white rounded px-4 py-2 flex justify-center w-full font-semibold hover:bg-sky-200 transition-all duration-300"
+    onClick={PlaceOrder}
+  >
+    {paymentMode === "COD" ? "Place your COD Order" : "Pay & Place Order"}
+  </button>
               </div>
         </div>
       </div>

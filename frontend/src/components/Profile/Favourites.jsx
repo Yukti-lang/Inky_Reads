@@ -20,7 +20,7 @@ const [FavouriteBooks, setFavouriteBooks] = useState()
   return (
     <>
     { FavouriteBooks && FavouriteBooks.length === 0 && (
-      <div className="text-5xl h-[100%] font-semibold text-white flex items-center justify-center flex-col w-full ">
+      <div className="text-5xl h-[77vh] font-semibold text-white flex items-center justify-center flex-col w-full ">
         No favourite books
         <img src="./bookmark.png" alt="" className="h-[20vh] my-8"/>
       </div >

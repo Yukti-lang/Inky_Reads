@@ -16,11 +16,11 @@ const BookCard = ({ data, favourite }) => {
     alert(response.data.message)
   }
   return (
-    <div className="bg-sky-300 rounded p-4 flex flex-col">
+    <div className="bg-sky-300 rounded p-4 flex flex-col ">
       <Link to={`/view-book-details/${data._id}`}>
       <div className="">
-        <div className="bg-sky-500 rounded flex items-center justify-center">
-          <img src={data.url} alt="/" className="h-[25vh]" />
+        <div className="bg-white rounded flex items-center justify-center p-2  ">
+          <img src={data.url} alt="/" className="h-[25vh] shadow-xl  drop-shadow-[0_0_15px_rgba(0,0,0,0.6)] transition duration-300 " />
         </div>
         <h2 className="mt-4 text-xl text-black font-semibold" >{data.title}</h2>
         <p className="mt-2 text-zinc-700 font-semibold" >by {data.author}</p>

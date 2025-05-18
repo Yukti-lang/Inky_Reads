@@ -8,9 +8,9 @@ const { authenticateToken } = require("./userToken");
 router.post("/placeorder", authenticateToken, async (req, res) => {
     try {
         const { id } = req.headers;
-        const { order } = req.body;
+        const { order,mode } = req.body;
         for(const orderData of order) {
-            const newOrder = new Order({ user:id ,book : orderData._id });
+            const newOrder = new Order({ user:id ,book : orderData._id, paymentMode:mode });
             const orderDataFromDb = await newOrder.save();
             //saving order in user model
             await User.findByIdAndUpdate(id, {
@@ -68,7 +68,7 @@ router.get("/getallorders", authenticateToken, async (req, res) => {
         res.status(500).json({ message: "an error occurred in getting all orders" });
     }
 });
-//update status
+//update status --admin
 router.put("/updatestatus/:id", authenticateToken, async (req, res) => {
     try {
         const { id } = req.params;
@@ -82,4 +82,6 @@ router.put("/updatestatus/:id", authenticateToken, async (req, res) => {
         res.status(500).json({ message: "internal server error in updating status" });
     }
 });
+// getorder
+
 module.exports = router;

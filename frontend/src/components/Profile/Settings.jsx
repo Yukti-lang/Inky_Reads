@@ -34,7 +34,7 @@ const Settings = () => {
     <>
       {!ProfiileData && <div className="w-full h-[100%] flex items-center justify-center"><Loader/></div>}
       {ProfiileData && (
-        <div className="h-[100%] p-0 md:p-4 text-black">
+        <div className="h-[60vh] p-0 md:p-4 text-black">
           <h1 className="text-3xl md:test-5xl font-semibold  text-white mb-8 ">
             Settings
           </h1>
