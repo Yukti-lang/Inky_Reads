@@ -36,7 +36,7 @@ const LogIn = () => {
    }
   }
   return (
-   <div className="h-[87vh] bg-white px-12 py-8 flex items-center justify-center">
+   <div className="h-[87vh] bg-fuchsia-100 px-12 py-8 flex items-center justify-center">
       <div className="bg-pink-300 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
         <p className="text-black text-xl font-semibold">Login</p>
         <div className="mt-4">
@@ -46,7 +46,7 @@ const LogIn = () => {
             </label>
             <input
             type="text"
-            className="w-full mt-2 bg-white text-black p-2 outline-none"
+            className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none"
             placeholder="username"
             name="username"
             required
@@ -60,7 +60,7 @@ const LogIn = () => {
               </label>
               <input 
               type="password"
-              className="w-full mt-2 bg-white text-black p-2 outline-none "
+              className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none "
               placeholder="password"
               name="password"
               required
@@ -69,7 +69,7 @@ const LogIn = () => {
               />
           </div>
           <div className="mt-4">
-              <button className="w-full bg-sky-400 text-black font-semibold py-2 rounded hover:bg-zinc-200" 
+              <button className="w-full bg-sky-400 text-black font-semibold py-2 rounded hover:bg-zinc-200 transition-all duration-300" 
               onClick={submit}>
                 LogIn
               </button>
@@ -79,7 +79,7 @@ const LogIn = () => {
           </p>
           <p className="flex mt-4 items-center justify-center text-black font-semibold">
             Don't have an account ? &nbsp; 
-            <Link to="/signup" className="hover:text-black hover:bg-white">
+            <Link to="/signup" className="hover:text-black hover:text-white transition-all duration-300">
             <u>SignUp</u>
             </Link>
           </p>

@@ -52,9 +52,9 @@ const ViewBookDetails = () => {
    {Data &&  <div className="px-4  md:px-12 py-8 bg-white flex flex-col lg:flex-row gap-8">
       <div className=" w-full lg:w-3/6 ">
       {" "}
-      <div className="flex flex-col lg:flex-row justify-around bg-pink-300  p-12 rounded">
+      <div className="flex flex-col lg:flex-row justify-around bg-pink-300  p-12 rounded  ">
         <img src={Data.url} alt="/" 
-        className="h-[50vh] md:h-[60vh] lg:h-[70vh] rounded" />
+        className="h-[50vh] md:h-[60vh] lg:h-[70vh] rounded drop-shadow-[0_0_15px_rgba(0,0,0,0.6)] transition duration-300" />
       {isLoggedIn === true && role ==="user" && (
         <div className="flex flex-col md:flex-row lg:flex-col mt-4 items-center justify-between lg:justify-start  lg:mt-0">
         <button className="bg-white rounded lg:rounded-full text-3xl p-3 flex items-center justify-center text-red-500" onClick={handleFavourite}>

@@ -27,7 +27,7 @@ const SignUp = () => {
    }
   };
   return (
-    <div className="h-[87vh] lg:h-auto bg-white px-12 py-8 flex items-center justify-center">
+    <div className="h-[87vh] lg:h-auto bg-fuchsia-100 px-12 py-8 flex items-center justify-center">
       <div className="bg-pink-300 rounded-lg px-8 py-5 w-full md:w-3/6 lg:w-2/6">
         <p className="text-black text-xl font-semibold">Sign Up</p>
         <div className="mt-4">
@@ -37,7 +37,7 @@ const SignUp = () => {
             </label>
             <input
             type="text"
-            className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
+            className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none"
             placeholder="username"
             name="username"
             required
@@ -51,7 +51,7 @@ const SignUp = () => {
             </label>
             <input
                type="text"
-               className="w-full mt-2 bg-sky-400 text-black p-2 outline-none"
+               className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none"
                placeholder="xyz@example.com"
                name="email"
                required 
@@ -65,7 +65,7 @@ const SignUp = () => {
               </label>
               <input 
               type="password"
-              className="w-full mt-2 bg-sky-400 text-black p-2 outline-none "
+              className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none "
               placeholder="password"
               name="password"
               required
@@ -78,7 +78,7 @@ const SignUp = () => {
                   Address
               </label>
               <textarea
-               className="w-full mt-2 bg-sky-400 text-black p-2 outline-none  "
+               className="w-full mt-2 bg-fuchsia-100 text-black p-2 outline-none  "
                rows="5"
                placeholder="address"
                name="address"
@@ -88,7 +88,7 @@ const SignUp = () => {
                />
           </div>
           <div className="mt-4">
-              <button className="w-full bg-white text-black font-semibold py-2 rounded hover:bg-zinc-200 transition-all duration-300"
+              <button className="w-full bg-sky-400 text-black font-semibold py-2 rounded hover:bg-zinc-200 transition-all duration-300"
               onClick={submit}
               >
                 SignUp
@@ -99,7 +99,7 @@ const SignUp = () => {
           </p>
           <p className="flex mt-4 items-center justify-center text-black font-semibold">
             Already have an account ? &nbsp; 
-            <Link to="/login" className="hover:text-white">
+            <Link to="/login" className="hover:text-white transition-all duration-300">
             <u>LogIn</u>
             </Link>
           </p>
