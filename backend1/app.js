@@ -27,7 +27,7 @@ app.use("/api/v1",Favourite);
 app.use("/api/v1",Cart1);
 app.use("/api/v1",Order);
 //creating port
-// app.listen(process.env.PORT, () => {
-//     console.log(`Server is running on port ${process.env.PORT}`);
-// });
-module.exports = app;
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
+});
+// module.exports = app;
